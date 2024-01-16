@@ -2,4 +2,5 @@
 
 ## Explain Your Program: Sequencing
 
-https://youtu.be/LPD4u7oAgmI 
+[https://youtu.be/LPD4u7oAgmI](https://youtu.be/LPD4u7oAgmI) 
+
