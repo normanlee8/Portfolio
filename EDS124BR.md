@@ -11,9 +11,3 @@
 [https://youtu.be/6tFNldQoyGg](https://youtu.be/6tFNldQoyGg) 
 
 {% include youtube.html id="6tFNldQoyGg" %}  
-
-## Explain Your Program: Repeats Animal Parade
-
-[https://youtu.be/kHbEpmGqGAc](https://youtu.be/kHbEpmGqGAc) 
-
-{% include youtube.html id="kHbEpmGqGAc" %} 
