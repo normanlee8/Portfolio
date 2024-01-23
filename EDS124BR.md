@@ -1,6 +1,6 @@
 # EDS 124BR Portfolio - Norman Lee
 
-## Explain Your Program: Animal Parade
+## Explain Your Program: Repeats Animal Parade
 
 [https://youtu.be/MwprwFk4QTU](https://youtu.be/MwprwFk4QTU) 
 
