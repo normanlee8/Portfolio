@@ -11,7 +11,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Center content horizontally */
     background-color: #f0f0f0; /* Light mode background */
     color: #333; /* Light mode text */
     transition: background-color 0.3s, color 0.3s;
@@ -31,7 +31,7 @@
     color: white;
     cursor: pointer;
     padding: 15px;
-    width: 600px;
+    width: 600px; /* Adjust width as needed */
     border: none;
     text-align: center;
     outline: none;
@@ -46,8 +46,8 @@
   }
 
   .panel {
-    width: 600px;
-    display: none;
+    width: 600px; /* Adjust width as needed */
+    display: none; /* Initially hide the content */
     overflow: hidden;
     border-radius: 5px;
   }
@@ -64,56 +64,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-  }
-
-  /* Dark mode toggle styles */
-  .theme-switch-wrapper {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  .theme-switch {
-    display: inline-block;
-    height: 34px;
-    position: relative;
-    width: 60px;
-  }
-
-  .theme-switch input {
-    display: none;
-  }
-
-  .slider {
-    background-color: #ccc;
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: 0.4s;
-    border-radius: 34px;
-  }
-
-  .slider:before {
-    background-color: #fff;
-    bottom: 4px;
-    content: "";
-    height: 26px;
-    left: 4px;
-    position: absolute;
-    transition: 0.4s;
-    width: 26px;
-    border-radius: 50%;
-  }
-
-  input:checked + .slider {
-    background-color: #66bb6a;
-  }
-
-  input:checked + .slider:before {
-    transform: translateX(26px);
   }
 
   /* Media query for dark mode preference */
@@ -134,14 +84,6 @@
 </style>
 </head>
 <body>
-
-<div class="theme-switch-wrapper">
-  <label class="theme-switch" for="checkbox">
-    <input type="checkbox" id="checkbox">
-    <div class="slider round"></div>
-  </label>
-  <em>Enable Dark Mode!</em>
-</div>
 
 <h2>Norman Lee's EDS 124BR Portfolio</h2>
 
@@ -184,17 +126,20 @@
     });
   }
 
-  // JavaScript for the dark mode toggle
-  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-  toggleSwitch.addEventListener('change', switchTheme, false);
-
-  function switchTheme(e) {
-    if (e.target.checked) {
+  // Automatic dark mode based on system preference
+  function setDarkMode() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.body.classList.add("dark-mode");
     } else {
       document.body.classList.remove("dark-mode");
     }
   }
+
+  // Listen for changes in the system's color scheme preference
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setDarkMode);
+
+  // Set initial theme
+  setDarkMode();
 </script>
 
 </body>
