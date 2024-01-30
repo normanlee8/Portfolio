@@ -5,58 +5,59 @@
 <title>Norman Lee's EDS 124BR Portfolio</title>
 <style>
   body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align the content */
-  }
-  .accordion {
-    background-color: #007bff; /* Blue background */
-    color: white; /* White text color */
-    cursor: pointer;
-    padding: 15px;
-    width: 80%; /* Adjust width as per requirement */
-    border: none;
-    text-align: center; /* Center text inside the button */
-    outline: none;
-    font-size: 18px;
-    margin-bottom: 5px; /* Space between buttons */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.4s, transform 0.2s; /* Smooth background color change and slight push effect on click */
-  }
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the content */
+}
 
-  .accordion:hover, .accordion:focus {
-    background-color: #0056b3; /* Darker blue on hover/focus */
-  }
+.accordion {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text color */
+  cursor: pointer;
+  padding: 15px;
+  width: 600px; /* Fixed width for buttons */
+  border: none;
+  text-align: center; /* Center text inside the button */
+  outline: none;
+  font-size: 18px;
+  margin-bottom: 5px; /* Space between buttons */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.4s, transform 0.2s; /* Smooth background color change and slight push effect on click */
+}
 
-  .accordion:active {
-    transform: translateY(2px); /* Push effect on click */
-  }
+.accordion:hover, .accordion:focus {
+  background-color: #0056b3; /* Darker blue on hover/focus */
+}
 
-  .panel {
-    width: 80%; /* Match the width of the accordion buttons */
-    padding: 0;
-    background-color: white;
-    display: none;
-    overflow: hidden;
-    align-items: center; /* Center align the content */
-    border-radius: 5px; /* Rounded corners for the panel */
-  }
+.accordion:active {
+  transform: translateY(2px); /* Push effect on click */
+}
 
-  .video-responsive {
-    position: relative;
-    width: 100%; /* Full width of the panel */
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  }
+.panel {
+  width: 600px; /* Fixed width to match the accordion buttons */
+  padding: 0;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  border-radius: 5px; /* Rounded corners for the panel */
+}
 
-  .video-responsive iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+.video-responsive {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 </style>
 </head>
 <body>
