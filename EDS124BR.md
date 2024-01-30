@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,22 +6,29 @@
 <style>
   body {
     font-family: Arial, sans-serif;
+    margin: 20px;
   }
   .accordion {
-    background-color: #eee;
-    color: #444;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text color */
     cursor: pointer;
-    padding: 18px;
-    width: 100%;
+    padding: 15px;
+    width: calc(100% - 30px); /* Full width minus padding */
     border: none;
     text-align: left;
     outline: none;
-    font-size: 15px;
-    transition: 0.4s;
+    font-size: 18px;
+    margin-bottom: 5px; /* Space between buttons */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.4s, transform 0.2s; /* Smooth background color change and slight push effect on click */
   }
 
-  .active, .accordion:hover {
-    background-color: #ccc;
+  .accordion:hover, .accordion:focus {
+    background-color: #0056b3; /* Darker blue on hover/focus */
+  }
+
+  .accordion:active {
+    transform: translateY(2px); /* Push effect on click */
   }
 
   .panel {
@@ -30,15 +36,12 @@
     background-color: white;
     display: none;
     overflow: hidden;
-  }
-
-  .panel.show {
-    display: block;
+    border-radius: 5px; /* Rounded corners for the panel */
   }
 
   .video-responsive {
     overflow: hidden;
-    padding-bottom: 56.25%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
     position: relative;
     height: 0;
   }
@@ -58,7 +61,6 @@
 
 <button class="accordion">Sequencing</button>
 <div class="panel">
-  <p>Introduction to sequencing with examples and video demonstrations.</p>
   <div class="video-responsive">
     <iframe src="https://www.youtube.com/embed/LPD4u7oAgmI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
@@ -66,7 +68,6 @@
 
 <button class="accordion">Repeats</button>
 <div class="panel">
-  <p>Exploring the concept of loops with practical programming examples.</p>
   <div class="video-responsive">
     <iframe src="https://www.youtube.com/embed/6tFNldQoyGg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
@@ -74,7 +75,6 @@
 
 <button class="accordion">Repeats Animal Parade</button>
 <div class="panel">
-  <p>Animating an animal parade to demonstrate loops in a creative way.</p>
   <div class="video-responsive">
     <iframe src="https://www.youtube.com/embed/kHbEpmGqGAc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
@@ -82,7 +82,6 @@
 
 <button class="accordion">Nested Repeats</button>
 <div class="panel">
-  <p>Diving deeper into nested loops with complex pattern examples.</p>
   <div class="video-responsive">
     <iframe src="https://www.youtube.com/embed/nMpQpcanfcY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
