@@ -72,6 +72,13 @@
                 <iframe src="https://www.youtube.com/embed/nMpQpcanfcY" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
+
+        <div class="video-section">
+            <h2>Explain Your Program: Events</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/YnJmzl1RkNw" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 </body>
 </html>
