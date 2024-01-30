@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EDS 124BR Portfolio - Norman Lee</title>
+    <title>Norman Lee's EDS 124BR Portfolio</title>
     <style>
         body.dark-mode {
             background-color: #121212; /* Dark background */
@@ -20,12 +20,15 @@
             color: #BB86FC; /* Slightly purple tint for headings */
         }
 
+        .video-section {
+            margin-bottom: 20px;
+        }
+
         .video-wrapper {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
             height: 0;
             overflow: hidden;
-            margin-bottom: 20px;
         }
 
         .video-wrapper iframe {
@@ -40,27 +43,35 @@
 </head>
 <body class="dark-mode">
     <div class="container">
-        <h1>EDS 124BR Portfolio - Norman Lee</h1>
+        <h1>Norman Lee's EDS 124BR Portfolio</h1>
         
-        <section class="video-wrapper">
+        <div class="video-section">
             <h2>Explain Your Program: Sequencing</h2>
-            <iframe src="https://www.youtube.com/embed/LPD4u7oAgmI" frameborder="0" allowfullscreen></iframe>
-        </section>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/LPD4u7oAgmI" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
 
-        <section class="video-wrapper">
+        <div class="video-section">
             <h2>Explain Your Program: Repeats</h2>
-            <iframe src="https://www.youtube.com/embed/6tFNldQoyGg" frameborder="0" allowfullscreen></iframe>
-        </section>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/6tFNldQoyGg" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
 
-        <section class="video-wrapper">
+        <div class="video-section">
             <h2>Explain Your Program: Repeats Animal Parade</h2>
-            <iframe src="https://www.youtube.com/embed/kHbEpmGqGAc" frameborder="0" allowfullscreen></iframe>
-        </section>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/kHbEpmGqGAc" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
 
-        <section class="video-wrapper">
+        <div class="video-section">
             <h2>Explain Your Program: Nested Repeats</h2>
-            <iframe src="https://www.youtube.com/embed/nMpQpcanfcY" frameborder="0" allowfullscreen></iframe>
-        </section>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/nMpQpcanfcY" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 </body>
 </html>
