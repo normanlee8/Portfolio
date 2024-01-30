@@ -16,4 +16,10 @@
 
 [https://youtu.be/kHbEpmGqGAc](https://youtu.be/kHbEpmGqGAc) 
 
-{% include youtube.html id="kHbEpmGqGAc" %}  
+{% include youtube.html id="kHbEpmGqGAc" %} 
+
+## Explain Your Program: Nested Repeats
+
+[https://youtu.be/nMpQpcanfcY](https://youtu.be/nMpQpcanfcY) 
+
+{% include youtube.html id="nMpQpcanfcY" %}  
