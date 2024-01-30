@@ -7,36 +7,55 @@
   body {
     font-family: Arial, sans-serif;
     margin: 20px;
-  }
-
-  h3 {
-    color: #007bff;
-    margin-bottom: 5px;
-  }
-
-  .container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center; /* Center align the content */
+  }
+  .accordion {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text color */
+    cursor: pointer;
+    padding: 15px;
+    width: 80%; /* Adjust width as per requirement */
+    border: none;
+    text-align: center; /* Center text inside the button */
+    outline: none;
+    font-size: 18px;
+    margin-bottom: 5px; /* Space between buttons */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.4s, transform 0.2s; /* Smooth background color change and slight push effect on click */
+  }
+
+  .accordion:hover, .accordion:focus {
+    background-color: #0056b3; /* Darker blue on hover/focus */
+  }
+
+  .accordion:active {
+    transform: translateY(2px); /* Push effect on click */
+  }
+
+  .panel {
+    width: 80%; /* Match the width of the accordion buttons */
+    padding: 0;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    align-items: center; /* Center align the content */
+    border-radius: 5px; /* Rounded corners for the panel */
   }
 
   .video-responsive {
-    flex: 1 1 45%;
-    max-width: 45%;
-    box-sizing: border-box;
-    padding: 10px;
+    position: relative;
+    width: 100%; /* Full width of the panel */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
   }
 
   .video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 250px; /* Fixed height, adjust as needed */
-  }
-
-  @media screen and (orientation: landscape) {
-    .video-responsive {
-      flex: 1 1 30%;
-      max-width: 30%;
-    }
+    height: 100%;
   }
 </style>
 </head>
@@ -44,13 +63,52 @@
 
 <h2>Norman Lee's EDS 124BR Portfolio</h2>
 
-<div class="container">
-  <div class="video-responsive">
-    <h3>Sequencing</h3>
-    <iframe src="https://www.youtube.com/embed/LPD4u7oAgmI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="content">
+  <button class="accordion">Sequencing</button>
+  <div class="panel">
+    <div class="video-responsive">
+      <iframe src="https://www.youtube.com/embed/LPD4u7oAgmI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
   </div>
-  <!-- Repeat for other videos -->
+
+  <button class="accordion">Repeats</button>
+  <div class="panel">
+    <div class="video-responsive">
+      <iframe src="https://www.youtube.com/embed/6tFNldQoyGg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <button class="accordion">Repeats Animal Parade</button>
+  <div class="panel">
+    <div class="video-responsive">
+      <iframe src="https://www.youtube.com/embed/kHbEpmGqGAc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <button class="accordion">Nested Repeats</button>
+  <div class="panel">
+    <div class="video-responsive">
+      <iframe src="https://www.youtube.com/embed/nMpQpcanfcY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
 </div>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
