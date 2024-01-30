@@ -4,18 +4,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Norman Lee's EDS 124BR Portfolio</title>
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
+  html, body {
+    height: 100%; /* Ensure full height */
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align the content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    font-family: Arial, sans-serif;
   }
 
   h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
 
   .accordion {
@@ -24,11 +26,11 @@
     cursor: pointer;
     padding: 15px;
     width: 600px; /* Fixed width for buttons */
-    border: none;
     text-align: center; /* Center text inside the button */
+    border: none;
     outline: none;
     font-size: 18px;
-    margin-bottom: 5px; /* Space between buttons */
+    margin-bottom: 10px; /* Space between buttons */
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.4s, transform 0.2s; /* Smooth background color change and slight push effect on click */
   }
@@ -37,13 +39,9 @@
     background-color: #0056b3; /* Darker blue on hover/focus */
   }
 
-  .accordion:active {
-    transform: translateY(2px); /* Push effect on click */
-  }
-
   .panel {
     width: 600px; /* Fixed width to match the accordion buttons */
-    display: none;
+    display: none; /* Initially hide the content */
     overflow: hidden;
     border-radius: 5px; /* Rounded corners for the panel */
   }
@@ -67,49 +65,10 @@
 
 <h2>Norman Lee's EDS 124BR Portfolio</h2>
 
-<button class="accordion">Sequencing</button>
-<div class="panel">
-  <div class="video-responsive">
-    <iframe src="https://www.youtube.com/embed/LPD4u7oAgmI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</div>
-
-<button class="accordion">Repeats</button>
-<div class="panel">
-  <div class="video-responsive">
-    <iframe src="https://www.youtube.com/embed/6tFNldQoyGg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</div>
-
-<button class="accordion">Repeats Animal Parade</button>
-<div class="panel">
-  <div class="video-responsive">
-    <iframe src="https://www.youtube.com/embed/kHbEpmGqGAc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</div>
-
-<button class="accordion">Nested Repeats</button>
-<div class="panel">
-  <div class="video-responsive">
-    <iframe src="https://www.youtube.com/embed/nMpQpcanfcY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</div>
+<!-- Accordion buttons and panels -->
 
 <script>
-  var acc = document.getElementsByClassName("accordion");
-  var i;
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  }
+  // JavaScript for accordion functionality
 </script>
 
 </body>
