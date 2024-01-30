@@ -2,12 +2,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Norman Lee's EDS 124BR Portfolio</title>
+    <title>EDS 124BR Portfolio - Norman Lee</title>
     <style>
         body.dark-mode {
-            background-color: #121212; /* Dark background */
-            color: #E0E0E0; /* Light text color */
-            font-family: Arial, sans-serif; /* Example font */
+            background-color: #121212;
+            color: #E0E0E0;
+            font-family: Arial, sans-serif;
         }
 
         .container {
@@ -17,45 +17,53 @@
         }
 
         h1, h2 {
-            color: #BB86FC; /* Slightly purple tint for headings */
+            color: #BB86FC;
         }
 
-        section {
-            margin-bottom: 20px;
-        }
-
-        iframe {
+        .video-container {
+            position: relative;
             width: 100%;
-            height: 315px; /* Adjust based on your preference */
-            border: none; /* Removes default border around iframes */
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
         }
 
-        /* Additional styles for padding, margins, etc., can be added here */
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Header hiding - example, assuming a class .header for the header */
+        .header {
+            display: none; /* Hide the header */
+        }
     </style>
 </head>
 <body class="dark-mode">
     <div class="container">
-        <h1>Norman Lee's EDS 124BR Portfolio</h1>
+        <h1>EDS 124BR Portfolio - Norman Lee</h1>
         
-        <section>
+        <div class="video-container">
             <h2>Explain Your Program: Sequencing</h2>
             <iframe src="https://www.youtube.com/embed/LPD4u7oAgmI" frameborder="0" allowfullscreen></iframe>
-        </section>
+        </div>
 
-        <section>
+        <div class="video-container">
             <h2>Explain Your Program: Repeats</h2>
             <iframe src="https://www.youtube.com/embed/6tFNldQoyGg" frameborder="0" allowfullscreen></iframe>
-        </section>
+        </div>
 
-        <section>
+        <div class="video-container">
             <h2>Explain Your Program: Repeats Animal Parade</h2>
             <iframe src="https://www.youtube.com/embed/kHbEpmGqGAc" frameborder="0" allowfullscreen></iframe>
-        </section>
+        </div>
 
-        <section>
+        <div class="video-container">
             <h2>Explain Your Program: Nested Repeats</h2>
             <iframe src="https://www.youtube.com/embed/nMpQpcanfcY" frameborder="0" allowfullscreen></iframe>
-        </section>
+        </div>
     </div>
 </body>
 </html>
