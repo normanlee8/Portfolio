@@ -86,6 +86,13 @@
                 <iframe src="https://www.youtube.com/embed/95tadsZbBL4" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
+
+        <div class="video-section">
+            <h2>Explain Your Program: Conditional Loops</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/u2q4z1AT2V8" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 </body>
 </html>
