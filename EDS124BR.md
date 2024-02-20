@@ -44,46 +44,11 @@
 <body class="dark-mode">
     <div class="container">
         <h1>Norman Lee's EDS 124BR Portfolio</h1>
-
+        
         <div class="video-section">
-            <h2>Explain Your Program: If/Else</h2>
+            <h2>Explain Your Program: Sequencing</h2>
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/Ht80GLdenRE" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <div class="video-section">
-            <h2>Explain Your Program: Conditional Loops</h2>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/u2q4z1AT2V8" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <div class="video-section">
-            <h2>Explain Your Program: Variables</h2>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/95tadsZbBL4" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <div class="video-section">
-            <h2>Explain Your Program: Events</h2>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/YnJmzl1RkNw" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <div class="video-section">
-            <h2>Explain Your Program: Nested Repeats</h2>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/nMpQpcanfcY" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <div class="video-section">
-            <h2>Explain Your Program: Repeats Animal Parade</h2>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/kHbEpmGqGAc" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/LPD4u7oAgmI" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -95,12 +60,46 @@
         </div>
 
         <div class="video-section">
-            <h2>Explain Your Program: Sequencing</h2>
+            <h2>Explain Your Program: Repeats Animal Parade</h2>
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/LPD4u7oAgmI" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/kHbEpmGqGAc" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
 
+        <div class="video-section">
+            <h2>Explain Your Program: Nested Repeats</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/nMpQpcanfcY" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="video-section">
+            <h2>Explain Your Program: Events</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/YnJmzl1RkNw" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="video-section">
+            <h2>Explain Your Program: Variables</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/95tadsZbBL4" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="video-section">
+            <h2>Explain Your Program: Conditional Loops</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/u2q4z1AT2V8" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="video-section">
+            <h2>Explain Your Program: If/Else</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Ht80GLdenRE" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 </body>
 </html>
