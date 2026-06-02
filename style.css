@@ -6,7 +6,8 @@
     margin: 0;
     padding: 0;
     /* border: 1px solid red; */
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: "Geist", sans-serif;
+    color: rgb(31, 31, 31);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -26,7 +27,6 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     text-decoration: none;
-    color: black;
 }
 
 ul {
@@ -40,10 +40,14 @@ body {
 }
 
 .header {
-    background-color: aliceblue;
+    font-size: 16px;
     padding: 8px;
-    font-size: 32px;
+    font-weight: 500;
 }
+
+/* .header-logo {
+    letter-spacing: 1.5px;
+} */
 
 .center-container{
     display: flex;
@@ -62,10 +66,8 @@ body {
 }
 
 .footer {
-    background-color: aliceblue;
-    color: black;
     text-align: center;
-    padding: 16px;
+    padding: 8px;
 }
 
 .section-home {
