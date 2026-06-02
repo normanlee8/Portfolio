@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     /* border: 1px solid red; */
-    font-family: "Geist", sans-serif;
+    font-family: "Inter", sans-serif;
     color: rgb(31, 31, 31);
 }
 
@@ -41,7 +41,7 @@ body {
 
 .header {
     font-size: 16px;
-    padding: 8px;
+    padding: 16px;
     font-weight: 500;
 }
 
@@ -67,7 +67,7 @@ body {
 
 .footer {
     text-align: center;
-    padding: 8px;
+    padding: 16px;
 }
 
 .section-home {
