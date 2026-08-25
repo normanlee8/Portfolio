@@ -27,20 +27,21 @@
     --text-8xl:  5rem;     /* 80px */
 
     /* Line Heights (Unitless) */
-    --leading-none: 1;       /* For massive hero text (72px+) */
-    --leading-tight: 1.15;   /* For headings (h1, h2, h3) */
-    --leading-snug: 1.3;     /* For subheadings (h4, 24px) */
-    --leading-normal: 1.5;   /* For body text (16px, 20px) */
-    --leading-loose: 1.7;    /* For dense, long-form reading */
+    --leading-none:   1;      /* For massive hero text (72px+) */
+    --leading-tight:  1.15;   /* For headings (h1, h2, h3) */
+    --leading-snug:   1.3;    /* For subheadings (h4, 24px) */
+    --leading-normal: 1.5;    /* For body text (16px, 20px) */
+    --leading-loose:  1.7;    /* For dense, long-form reading */
 
     /* Spacing Scale */
-    --space-xs:   0.25rem;  /* 4px  - tiny gaps */
-    --space-sm:   0.5rem;   /* 8px  - tight padding, small margins */
-    --space-md:   1rem;     /* 16px - standard padding, component gaps */
-    --space-lg:   1.5rem;   /* 24px - larger padding, section margins */
-    --space-xl:   2rem;     /* 32px - generous whitespace */
-    --space-2xl:  3rem;     /* 48px - major section breaks */
-    --space-3xl:  4rem;     /* 64px - massive page gaps */
+    --space-xs:  0.25rem;   /* 4px  - tiny gaps */
+    --space-sm:  0.5rem;    /* 8px  - tight padding, small margins */
+    --space-md:  1rem;      /* 16px - standard padding, component gaps */
+    --space-lg:  1.5rem;    /* 24px - larger padding, section margins */
+    --space-xl:  2rem;      /* 32px - generous whitespace */
+    --space-2xl: 2.5rem;    /* 40px - even more generous whitespace */
+    --space-3xl: 3rem;      /* 48px - major section breaks */
+    --space-4xl: 4rem;      /* 64px - massive page gaps */
 
     /* Content Width */
     --content-width: 952px;
@@ -67,7 +68,6 @@
 * {
     margin: 0;
     padding: 0;
-    color: var(--text-primary)
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -88,6 +88,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 ul {
@@ -102,6 +103,7 @@ body {
     background-color: var(--bg-color); 
     font-size: var(--text-base); 
     line-height: var(--leading-normal);
+    color: var(--text-primary);
 }
 
 /* Page Container */
@@ -121,6 +123,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .header-actions {
@@ -144,6 +147,7 @@ body {
 
 .nav-links a {
     position: relative;
+    width: fit-content;
 }
 
 .nav-links a::after {
@@ -255,23 +259,74 @@ body {
     display: block;
 }
 
-/* Hamburger */
-.hamburger-btn {
+/* Menu */
+.menu-toggle-btn {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
+    padding: var(--space-xs);
+    margin-right: calc(var(--space-xs) * -1);
+    border-radius: 8px;
     display: none;
     align-items: center;
     color: var(--text-primary);
+    transition: background-color 0.3s ease;
 }
 
+.menu-toggle-btn:hover {
+    background-color: color-mix(in srgb, var(--text-primary) 10%, transparent);
+}
+
+.menu-toggle-btn .exit-icon {
+    display: none;
+}
+
+.menu-toggle-btn[aria-expanded="true"] .hamburger-icon {
+    display: none;
+}
+
+.menu-toggle-btn[aria-expanded="true"] .exit-icon {
+    display: block;
+}
+
+.menu-toggle-btn[aria-expanded="true"] {
+    background-color: color-mix(in srgb, var(--text-primary) 30%, transparent);
+}
+
+
 @media (max-width: 952px) {
-    .hamburger-btn {
+    .header-actions {
+        gap: var(--space-sm);
+    }
+    .menu-toggle-btn {
         display: flex;
+        align-items: center;
     }
 
     .nav-links {
-        display: none;
+        display: flex;
+        flex-direction: column;
+
+        position: absolute;
+        top: var(--space-2xl);
+        right: 0;
+        z-index: 10;
+
+        background-color: var(--bg-card);
+        border:  1px solid var(--border-card);
+        padding: var(--space-md);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px var(--shadow-color);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 }

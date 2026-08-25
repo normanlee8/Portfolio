@@ -58,3 +58,20 @@ function updateButtonAria(isDark) {
         themeToggleBtn.setAttribute("title", "Change to dark mode");
     }
 }
+
+// Menu Toggle
+const menuToggleBtn = document.querySelector(".menu-toggle-btn");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggleBtn.addEventListener("click", () => {
+    const isExpanded = menuToggleBtn.getAttribute("aria-expanded") === "true";
+    menuToggleBtn.setAttribute("aria-expanded", !isExpanded);
+    navLinks.classList.toggle("active");
+})
+
+document.addEventListener("click", (e) => {
+    if (!menuToggleBtn.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove("active");
+        menuToggleBtn.setAttribute("aria-expanded", "false");
+    } 
+})
