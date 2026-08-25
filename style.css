@@ -1,11 +1,64 @@
 :root {
-    --bg-color: #F0EDE5;  /* Warm  background */
-    --text-primary: #242422; /* Charcoal for heading/main text */
-    --text-secondary: #595955; /* Muted grey for roles, tools, and tags */   
-   
+    /* Default Colors */
+    --bg-color: #F0EDE5;
+    --text-primary: #242422;
+    --text-secondary: #595955; 
+    
+    /* Project Card Colors */
+    --bg-thumbnail: #dbd4bf;
+    --bg-card: #eceae4;
+    --border-card: #dfdaca;
+    --shadow-color: rgba(0,0,0,0.05);
+
     --font-primary: "Times New Roman", "Georgia", Times, serif, sans-serif;
+
+    /* Typography Scale (Where 1rem = 16px) */
+    --text-xs:   0.875rem; /* 14px */
+    --text-sm:   1rem;     /* 16px */
+    --text-base: 1.25rem;  /* 20px (Base) */
+    --text-lg:   1.5rem;   /* 24px */
+    --text-xl:   1.75rem;  /* 28px */
+    --text-2xl:  2rem;     /* 32px */
+    --text-3xl:  2.5rem;   /* 40px */
+    --text-4xl:  3rem;     /* 48px */
+    --text-5xl:  3.5rem;   /* 56px */
+    --text-6xl:  4rem;     /* 64px */
+    --text-7xl:  4.5rem;   /* 72px */
+    --text-8xl:  5rem;     /* 80px */
+
+    /* Line Heights (Unitless) */
+    --leading-none: 1;       /* For massive hero text (72px+) */
+    --leading-tight: 1.15;   /* For headings (h1, h2, h3) */
+    --leading-snug: 1.3;     /* For subheadings (h4, 24px) */
+    --leading-normal: 1.5;   /* For body text (16px, 20px) */
+    --leading-loose: 1.7;    /* For dense, long-form reading */
+
+    /* Spacing Scale */
+    --space-xs:   0.25rem;  /* 4px  - tiny gaps */
+    --space-sm:   0.5rem;   /* 8px  - tight padding, small margins */
+    --space-md:   1rem;     /* 16px - standard padding, component gaps */
+    --space-lg:   1.5rem;   /* 24px - larger padding, section margins */
+    --space-xl:   2rem;     /* 32px - generous whitespace */
+    --space-2xl:  3rem;     /* 48px - major section breaks */
+    --space-3xl:  4rem;     /* 64px - massive page gaps */
+
+    /* Content Width */
+    --content-width: 952px;
 }
 
+/* Dark Mode */
+:root.dark-theme {
+    /* Background & Text */
+    --bg-color: #1C1B1A;
+    --text-primary: #E0DED8;
+    --text-secondary: #9A9893;
+    
+    /* Project Cards */
+    --bg-card: #262523;
+    --border-card: #383632;
+    --bg-thumbnail: #363430;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -14,7 +67,6 @@
 * {
     margin: 0;
     padding: 0;
-    /* border: 1px solid red; */
     color: var(--text-primary)
 }
 
@@ -31,6 +83,7 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
+    line-height: var(--leading-tight);
 }
 
 a {
@@ -47,7 +100,8 @@ body {
     flex-direction: column;
     font-family: var(--font-primary);
     background-color: var(--bg-color); 
-    /* background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E"); */
+    font-size: var(--text-base); 
+    line-height: var(--leading-normal);
 }
 
 /* Page Container */
@@ -56,52 +110,92 @@ body {
     flex-direction: column;
     text-align: left;
     flex: 1;
-    font-size: 16px;
-    max-width: 800px;
-    margin: 64px auto;
-    padding: 24px;
-    gap: 16px;
+    max-width: var(--content-width);
+    margin: var(--space-3xl) auto;
+    padding: var(--space-lg);
+    gap: var(--space-3xl);
 }
 
 /* Header Container */
 .header-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.button-container {
+.header-actions {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.name {
+    white-space: nowrap;
+}
+
+.name a:hover{
+    color: var(--text-secondary);
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0; 
+    left: 0;
+    background-color: var(--text-secondary);
+    transform-origin: right; 
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+
+.nav-links a:hover {
+    color: var(--text-secondary);
+}
+
+.nav-links a:hover::after {
+    transform-origin: left; 
+    transform: scaleX(1);
 }
 
 /* Projects Container */
 .project-heading {
-    margin-bottom: 16px;
+    margin-bottom: var(--space-md);
 }
 
 .project-container {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--space-md);
 }
 
 .project-thumbnail {
-    padding: 16px;
-    background-color: #dbd4bf;
+    padding: var(--space-md);
+    background-color: var(--bg-thumbnail);
     width: 100px;
     height: 100px;
     border-radius: 50%;
     display: flex;
     flex-shrink: 0;
-    margin-right: 16px;
-    box-shadow: inset 0px 4px 6px rgba(0,0,0,0.05);
+    margin-right: var(--space-md);
+    box-shadow: inset 0px 4px 6px var(--shadow-color);
 }
 
 .project-card {
     display: flex;
-    border: 1px solid #dfdaca;
-    background-color: #eceae4;
-    padding: 16px;
+    border: 1px solid var(--border-card);
+    background-color: var(--bg-card);
+    padding: var(--space-md);
     border-radius: 8px;
     align-items: center;
 }
@@ -109,24 +203,75 @@ body {
 .project-details {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--space-sm);
 }
 
 .project-role {
     font-style: italic;
     color: var(--text-secondary);
+    font-size: var(--text-sm);
 }
 
+/* Theme Toggle */
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    color: var(--text-primary);
+}
 
+.theme-toggle-btn svg {
+    display: none;
+}
 
+.theme-toggle-btn .moon-icon {
+    display: block;
+}
 
+.theme-toggle-btn:hover .moon-icon {
+    display: none;
+}
+.theme-toggle-btn:hover .moon-icon-fill {
+    display: block;
+}
 
+/* Dark Mode Icons */
+:root.dark-theme .theme-toggle-btn .moon-icon,
+:root.dark-theme .theme-toggle-btn .moon-icon-fill {
+    display: none;
+}
 
+:root.dark-theme .theme-toggle-btn .sun-icon {
+    display: block;
+}
 
+:root.dark-theme .theme-toggle-btn:hover .sun-icon {
+    display: none;
+}
+:root.dark-theme .theme-toggle-btn:hover .sun-icon-fill {
+    display: block;
+}
 
+/* Hamburger */
+.hamburger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: none;
+    align-items: center;
+    color: var(--text-primary);
+}
 
+@media (max-width: 952px) {
+    .hamburger-btn {
+        display: flex;
+    }
 
-
-
-
-
+    .nav-links {
+        display: none;
+    }
+}
